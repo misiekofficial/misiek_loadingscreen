@@ -124,7 +124,7 @@ export const LoadScreen = observer(function LoadScreen() {
 
                         <div className={s.userbar}>
                             <img alt='avatar' width={32} height={32} src='https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/a29e26aa160e7be7e845708c335b3c39.svg' />
-                            <div className={s.username}>{'UNDEFINED'}</div>
+                            <div className={s.username}>{window.nuiHandoverData.name}</div>
                         </div>
                     </div>
                 )}
