@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+::-webkit-scrollbar {
+  height: .15rem;
+  width: .15rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #282828;
+}
+
+::-webkit-scrollbar-track {
+  background-color: initial;
+}
+
+::selection {
+  background-color: #282828;
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+#root {
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+
+  &.shrink {
+    transform: translateX(-10px);
+  }
+}
+
+a {
+  cursor: pointer
+}
+
+@keyframes bganim {
+  0% {
+    background-position: 0px 0px;
+  }
+  50% {
+    background-position: 500px -500px;
+  }
+  100% {
+    background-position: 1000px -1000px;
+  }
+}
+
+.animated-background {
+  background-image: url(../assets/images/bg-repeat.png);
+  background-size: 250px;
+  animation: bganim 40s linear 0s infinite;
+}
